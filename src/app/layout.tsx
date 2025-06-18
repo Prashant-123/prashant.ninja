@@ -12,7 +12,7 @@ const inter = Inter({ subsets: ["latin"] });
 const title = "Prashant | Android Developer | Bangalore, India.";
 const description =
   "An experienced Software Development Engineer specializing in Android development. Explore his portfolio to see his work on high-performance apps, innovative projects, and contributions to the developer community.";
-const url = "https://prashant.ninja/";
+const url = "https://pklabs.in/";
 
 export const metadata: Metadata = {
   metadataBase: new URL(url),
