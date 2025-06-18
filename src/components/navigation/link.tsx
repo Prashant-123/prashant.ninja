@@ -1,7 +1,7 @@
-import * as React from 'react';
-import NextLink, { LinkProps as NextLinkProps } from 'next/link';
+import * as React from "react";
+import NextLink, { LinkProps as NextLinkProps } from "next/link";
 
-import { mergeClasses } from '@/lib/utils';
+import { mergeClasses } from "@/lib/utils";
 
 interface LinkProps extends NextLinkProps {
   className?: string;
@@ -16,7 +16,7 @@ const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(
     {
       noCustomization,
       children = null,
-      className = '',
+      className = "",
       externalLink = false,
       withUnderline = false,
       ...props
@@ -26,14 +26,12 @@ const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(
     return (
       <NextLink
         {...props}
-        target={externalLink ? '_blank' : '_self'}
+        target={externalLink ? "_blank" : "_self"}
         ref={ref}
         className={mergeClasses(
-          noCustomization ??
-            'text-base font-medium text-gray-600 transition-all hover:text-gray-900 active:text-gray-600',
-          withUnderline
-            ? 'underline underline-offset-4 transition-all hover:text-gray-900 active:text-gray-600'
-            : '',
+          !noCustomization &&
+            "text-base font-medium text-gray-600 transition-all hover:text-gray-900 active:text-gray-600 dark:text-gray-300 dark:hover:text-gray-50 dark:active:text-gray-100",
+          withUnderline ? "underline underline-offset-4" : "",
           className
         )}
       >
@@ -43,6 +41,6 @@ const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(
   }
 );
 
-Link.displayName = 'Link';
+Link.displayName = "Link";
 
 export default Link;

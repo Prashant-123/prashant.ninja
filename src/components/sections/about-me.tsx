@@ -34,7 +34,7 @@ const AboutMeSection = () => {
           <Typography>
             I&apos;m a passionate and experienced Software Development Engineer specializing in
             Android development. With a strong background in developing and maintaining
-            high-performance applications, I bring over four years of professional experience
+            high-performance applications, I bring over 5+ years of professional experience
             working with cutting-edge technologies and frameworks.
           </Typography>
           <Typography>

@@ -29,128 +29,130 @@ import ProjectSmartchef from "/public/images/project-smartchef.png";
 import ProjectIsClone from "/public/images/project-is-clone.webp";
 import ProjectSSCBS from "/public/images/project-sscbs.webp";
 import ProjectShiksha from "/public/images/project-shiksha.webp";
+import ProjectWriteNow from "/public/images/project-writenow.png";
+import ProjectMySandesh from "/public/images/project-sandesh.webp";
 
 import { ExperienceDetails, ProjectDetails, TechDetails } from "@/lib/types";
 
 export const EXTERNAL_LINKS = {
   GITHUB: "https://github.com/Prashant-123",
   MEDIUM: "https://medium.com/@dev-prashant",
-  INSTAGRAM: "https://www.instagram.com/prashant_21._/"
+  INSTAGRAM: "https://www.instagram.com/prashant_21._/",
 };
 
 export const NAV_LINKS = [
   {
     label: "About",
-    href: "#about"
+    href: "#about",
   },
   {
     label: "Work",
-    href: "#work"
+    href: "#work",
   },
   {
     label: "Contact",
-    href: "#contact"
-  }
+    href: "#contact",
+  },
 ];
 
 export const SOCIAL_LINKS = [
   {
     icon: Github,
-    url: "https://github.com/Prashant-123"
+    url: "https://github.com/Prashant-123",
   },
   {
     icon: Linkedin,
-    url: "https://www.linkedin.com/in/dev-prashant/"
+    url: "https://www.linkedin.com/in/dev-prashant/",
   },
   {
     icon: BookOpenCheck,
-    url: "https://medium.com/@dev-prashant"
-  }
+    url: "https://medium.com/@dev-prashant",
+  },
 ];
 
 export const TECHNOLOGIES: TechDetails[] = [
   {
     label: "Android",
     logo: LogoAndroid,
-    url: "https://developer.android.com/"
+    url: "https://developer.android.com/",
   },
   {
     label: "Flutter",
     logo: LogoFlutter,
-    url: "https://flutter.dev/"
+    url: "https://flutter.dev/",
   },
   {
     label: "Compose",
     logo: LogoCompose,
-    url: "https://developer.android.com/jetpack/compose"
+    url: "https://developer.android.com/jetpack/compose",
   },
   {
     label: "Firebase",
     logo: LogoFirebase,
-    url: "https://firebase.google.com/"
+    url: "https://firebase.google.com/",
   },
   {
     label: "Kotlin",
     logo: LogoKotlin,
-    url: "https://kotlinlang.org/"
+    url: "https://kotlinlang.org/",
   },
   {
     label: "Node.js",
     logo: LogoNode,
-    url: "https://nodejs.org/en"
+    url: "https://nodejs.org/en",
   },
   {
     label: "Express.js",
     logo: LogoExpress,
     darkModeLogo: LogoExpressLight,
-    url: "https://expressjs.com/"
+    url: "https://expressjs.com/",
   },
   {
     label: "Javascript",
     logo: LogoJavascript,
-    url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+    url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
   },
   {
     label: "Java",
     logo: LogoJava,
-    url: "https://www.java.com/en/"
+    url: "https://www.java.com/en/",
   },
   {
     label: "Realm",
     logo: LogoRealm,
-    url: "https://realm.io/"
+    url: "https://realm.io/",
   },
   {
     label: "AWS",
     logo: LogoAWSDark,
     darkModeLogo: LogoAWS,
-    url: "https://aws.amazon.com/"
+    url: "https://aws.amazon.com/",
   },
   {
     label: "Google Cloud",
     logo: LogoGCloud,
-    url: "https://cloud.google.com/"
+    url: "https://cloud.google.com/",
   },
   {
     label: "Postman",
     logo: LogoPostman,
-    url: "https://www.postman.com/"
+    url: "https://www.postman.com/",
   },
   {
     label: "CI/CD",
     logo: LogoCICD,
-    url: "https://github.com/features/actions"
+    url: "https://github.com/features/actions",
   },
   {
     label: "Next.js",
     logo: LogoNextJs,
-    url: "https://nextjs.org/"
+    url: "https://nextjs.org/",
   },
   {
     label: "Git",
     logo: LogoGit,
-    url: "https://git-scm.com/"
-  }
+    url: "https://git-scm.com/",
+  },
 ];
 
 export const EXPERIENCES: ExperienceDetails[] = [
@@ -165,8 +167,8 @@ export const EXPERIENCES: ExperienceDetails[] = [
       "Developed poster making app in Flutter where SMBs can share the posters and greetings to their customers",
       "Proactively resolve production issues on the Android app",
       "Wrote a full-fledged CI/CD pipeline to generate on-demand builds using Slack & GitHub Actions",
-      "Delivered product roadmap tasks like item batching, godown management, serialization, etc"
-    ]
+      "Delivered product roadmap tasks like item batching, godown management, serialization, etc",
+    ],
   },
   {
     logo: LogoInternshala,
@@ -180,12 +182,44 @@ export const EXPERIENCES: ExperienceDetails[] = [
       "Revamped the whole app, integrated student help center, added offline compatibility",
       "Shrinked Internshala app size from 9 MB to 6.2MB by optimizing proguard, gradle and assets.",
       "Maintained the consistency in crash-free users of 99.8% throughout a year",
-      "Handled sprint planning & task distribution."
-    ]
-  }
+      "Handled sprint planning & task distribution.",
+    ],
+  },
 ];
 
 export const PROJECTS: ProjectDetails[] = [
+  {
+    name: "WriteNow",
+    description:
+      "AI-powered resume builder that helps job seekers land their dream job by tailoring resumes to specific job descriptions. Features smart keyword extraction, ATS-friendly templates, and secure cloud storage.",
+    url: "https://writenow.in/",
+    previewImage: ProjectWriteNow,
+    technologies: [
+      "Next.js",
+      "Node.js",
+      "AI/ML",
+      "Javascript",
+      "Firebase",
+      "Cloud Storage",
+      "ATS Integration",
+    ],
+  },
+  {
+    name: "mySandesh - Poster Maker",
+    description:
+      "A comprehensive poster making app for small businesses to create and share customized marketing materials. Features AI poster maker, logo generator, festival templates, and voiceovers for enhanced customer engagement.",
+    url: "https://play.google.com/store/apps/details?id=com.valorem.my_sandesh&hl=en_IN",
+    previewImage: ProjectMySandesh,
+    technologies: [
+      "Flutter",
+      "Android",
+      "AI/ML",
+      "Firebase",
+      "Material Design",
+      "Voice Integration",
+      "Social Media APIs",
+    ],
+  },
   {
     name: "Money Minder",
     description:
@@ -203,8 +237,8 @@ export const PROJECTS: ProjectDetails[] = [
       "Work Manager",
       "NextJS",
       "Express.js",
-      "Nginx"
-    ]
+      "Nginx",
+    ],
   },
   {
     name: "Smartchef",
@@ -224,8 +258,8 @@ export const PROJECTS: ProjectDetails[] = [
       "Express.js",
       "SQL",
       "AWS",
-      "Sequelize"
-    ]
+      "Sequelize",
+    ],
   },
   {
     name: "Internshala Clone - Kotlin Multiplatform",
@@ -240,8 +274,8 @@ export const PROJECTS: ProjectDetails[] = [
       "Ktor",
       "SQLDelight",
       "Koin",
-      "Jetpack Compose"
-    ]
+      "Jetpack Compose",
+    ],
   },
   {
     name: "SSCBS - College App",
@@ -249,7 +283,7 @@ export const PROJECTS: ProjectDetails[] = [
       "My first Android project. It was a college app for Shaheed Sukhdev College College of Business Studies, and has features multiple login (Admin, Teacher and Student), like attendance, events, timetable, notes, etc. It uses Google Sheets API for data storage.",
     url: "https://github.com/Prashant-123/SSCBS",
     previewImage: ProjectSSCBS,
-    technologies: ["Android", "Java", "Firebase", "Google Sheets API"]
+    technologies: ["Android", "Java", "Firebase", "Google Sheets API"],
   },
   {
     name: "Shiksha - Freelance Project",
@@ -268,7 +302,7 @@ export const PROJECTS: ProjectDetails[] = [
       "PHP",
       "HTML",
       "CSS",
-      "JS"
-    ]
-  }
+      "JS",
+    ],
+  },
 ];

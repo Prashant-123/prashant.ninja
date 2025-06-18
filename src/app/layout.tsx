@@ -24,12 +24,12 @@ export const metadata: Metadata = {
     "Mobile App Development",
     "Android Developer",
     "Android Development",
-    "Android Engineer"
+    "Android Engineer",
   ],
   creator: "Prashant Kumar",
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" }
+    { media: "(prefers-color-scheme: dark)", color: "black" },
   ],
   openGraph: {
     type: "website",
@@ -39,27 +39,52 @@ export const metadata: Metadata = {
     siteName: title,
     images: [
       {
-        url: "/images/open-graph-prashant.png"
-      }
-    ]
+        url: "/images/open-graph-prashant.png",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title,
     description,
     creator: "@pk021998",
-    images: "/images/open-graph-prashant.png"
+    images: "/images/open-graph-prashant.png",
   },
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon-16x16.png",
-    apple: "/apple-touch-icon.png"
-  }
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 const googleAnalyticsId = process.env.GOOGLE_ANALYTICS_ID;
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+// Particle Background Component
+const ParticleBackground = () => {
+  return (
+    <div className="particles">
+      {[...Array(20)].map((_, i) => (
+        <div
+          key={i}
+          className="particle"
+          style={{
+            left: `${Math.random() * 100}%`,
+            width: `${Math.random() * 8 + 4}px`,
+            height: `${Math.random() * 8 + 4}px`,
+            animationDelay: `${Math.random() * 10}s`,
+            animationDuration: `${Math.random() * 20 + 10}s`,
+          }}
+        />
+      ))}
+    </div>
+  );
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en" className="!scroll-smooth" suppressHydrationWarning>
       {googleAnalyticsId ? (
@@ -79,11 +104,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </Script>
         </head>
       ) : null}
-      <body className={`${inter.className} bg-gray text-gray-600 antialiased`}>
+      <body
+        className={`${inter.className} relative overflow-x-hidden text-gray-600 antialiased`}
+      >
         <Providers>
-          <Header />
-          <main className="flex min-h-screen w-full flex-col">{children}</main>
-          <Footer />
+          <ParticleBackground />
+          <div className="relative z-10">
+            <Header />
+            <main className="flex min-h-screen w-full flex-col">
+              {children}
+            </main>
+            <Footer />
+          </div>
         </Providers>
       </body>
     </html>

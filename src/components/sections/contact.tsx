@@ -20,7 +20,9 @@ type CopyValue = "email" | "phone";
 const ContactSection = () => {
   const { width } = useWindowSize();
   const [isCopied, setIsCopied] = useState(false);
-  const [copiedValueType, setCopiedValueType] = useState<CopyValue | null>(null);
+  const [copiedValueType, setCopiedValueType] = useState<CopyValue | null>(
+    null
+  );
 
   const handleCopyClick = async (text: string, type: CopyValue) => {
     try {
@@ -41,18 +43,18 @@ const ContactSection = () => {
 
   return (
     <Container id="contact">
-      <div className="flex flex-col items-center gap-4">
+      <div className="flex flex-col items-center gap-2">
         <div className="self-center">
-          <Tag label="Get in touch" />
+          <Tag label="Get in touch" variant="glass" />
         </div>
         <Typography variant="subtitle" className="max-w-xl text-center">
-          What&apos;s next? Feel free to reach out to me if you are looking for a developer, have a
-          query, or simply want to connect.
+          What&apos;s next? Feel free to reach out to me if you are looking for
+          a developer, have a query, or simply want to connect.
         </Typography>
       </div>
 
-      <div className="flex flex-col items-center gap-6 md:gap-12">
-        <div className="flex flex-col items-center md:gap-4">
+      <div className="flex flex-col items-center gap-3 md:gap-6">
+        <div className="flex flex-col items-center gap-1 md:gap-2">
           <div className="flex items-center gap-4 md:gap-5">
             <Mail className="h-6 w-6 md:h-8 md:w-8" />
             {/* <Link href={`mailto:${email}`}> */}
@@ -83,7 +85,9 @@ const ContactSection = () => {
           </div>
         </div>
         <div className="flex flex-col items-center gap-2">
-          <Typography className="text-center">You may also find me on these platforms!</Typography>
+          <Typography className="text-center">
+            You may also find me on these platforms!
+          </Typography>
           <SocialIcons />
         </div>
       </div>
