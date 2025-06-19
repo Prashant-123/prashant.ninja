@@ -1,8 +1,7 @@
 {
-    "redirects": [{
-        "source": "/(.*)",
-        "destination": "/horoscope",
-        "permanent": false,
+    "rewrites": [{
+        "source": "/:path*",
+        "destination": "/horoscope/:path*",
         "has": [{
             "type": "host",
             "value": "horoscope.pklabs.in"
