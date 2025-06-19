@@ -1,0 +1,10 @@
+{
+    "rewrites": [{
+        "source": "/(.*)",
+        "destination": "/horoscope",
+        "has": [{
+            "type": "host",
+            "value": "horoscope.pklabs.in"
+        }]
+    }]
+}
