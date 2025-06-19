@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { Globe, Heart, Activity, DollarSign, Briefcase } from "lucide-react";
+import Image from "next/image";
 
 const categoryIcons: { [key: string]: React.ComponentType<{ size?: number }> } =
   {
@@ -109,7 +110,7 @@ const HoroscopeContent = ({
     <div>
       <div className="horoscope-mb-6 horoscope-flex horoscope-items-center horoscope-gap-4">
         {data.sign_image && (
-          <img
+          <Image
             src={data.sign_image}
             alt={data.sign}
             style={{ width: "64px", height: "64px", filter: "invert(1)" }}
