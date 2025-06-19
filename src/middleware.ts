@@ -5,10 +5,12 @@ export function middleware(request: NextRequest) {
   const hostname = request.headers.get("host") || "";
 
   // Check if the request is from horoscope.pklabs.in
-  if (hostname === "horoscope.pklabs.in") {
-    // Rewrite to the horoscope route
-    url.pathname = "/horoscope";
-    return NextResponse.rewrite(url);
+  if (hostname.includes("horoscope.pklabs.in")) {
+    // Don't rewrite if already on horoscope path to avoid loops
+    if (!url.pathname.startsWith("/horoscope")) {
+      url.pathname = "/horoscope" + url.pathname;
+      return NextResponse.rewrite(url);
+    }
   }
 
   // For all other requests, continue normally
