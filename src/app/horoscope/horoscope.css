@@ -324,10 +324,10 @@ h3 {
   }
 
   .horoscope-btn-tab {
-    padding: 10px 16px;
+    padding: 8px 12px;
     margin: 3px;
-    font-size: 13px;
-    border-radius: 12px;
+    font-size: 14px;
+    border-radius: 10px;
   }
 
   .horoscope-btn-tab:hover,
@@ -350,14 +350,14 @@ h3 {
 
   /* Better button layout on mobile */
   .horoscope-flex-wrap {
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   /* Reduce select padding on mobile */
   .horoscope-select {
-    padding: 14px 16px;
+    padding: 10px 16px;
     font-size: 15px;
-    border-radius: 12px;
+    border-radius: 10px;
     background-position: right 12px center;
   }
 
@@ -368,9 +368,10 @@ h3 {
 
   /* Smaller label text */
   .horoscope-label {
-    font-size: 13px;
-    margin-bottom: 10px;
-    letter-spacing: 0.3px;
+    font-size: 10px;
+    margin-bottom: 3px;
+    letter-spacing: 0.2px;
+    font-weight: 500;
   }
 }
 

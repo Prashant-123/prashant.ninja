@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { Globe, Heart, Activity, DollarSign, Briefcase } from "lucide-react";
 import Image from "next/image";
+import Button from "@/components/general/button";
 
 const categoryIcons: { [key: string]: React.ComponentType<{ size?: number }> } =
   {
@@ -113,7 +114,8 @@ const HoroscopeContent = ({
           <Image
             src={data.sign_image}
             alt={data.sign}
-            style={{ width: "64px", height: "64px", filter: "invert(1)" }}
+            width={64}
+            height={64}
           />
         )}
         <div>
@@ -144,7 +146,7 @@ const HoroscopeContent = ({
         {Object.keys(categoryIcons).map((category) => {
           const Icon = categoryIcons[category];
           return (
-            <button
+            <Button
               key={category}
               onClick={() => onCategoryChange(category)}
               className={`horoscope-btn-tab ${
@@ -153,7 +155,7 @@ const HoroscopeContent = ({
             >
               <Icon size={18} />
               <span>{category}</span>
-            </button>
+            </Button>
           );
         })}
       </div>
