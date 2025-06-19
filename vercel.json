@@ -1,10 +1,19 @@
 {
     "rewrites": [{
-        "source": "/:path*",
-        "destination": "/horoscope/:path*",
-        "has": [{
-            "type": "host",
-            "value": "horoscope.pklabs.in"
-        }]
-    }]
+            "source": "/",
+            "destination": "/horoscope",
+            "has": [{
+                "type": "host",
+                "value": "horoscope.pklabs.in"
+            }]
+        },
+        {
+            "source": "/((?!horoscope).*)",
+            "destination": "/horoscope",
+            "has": [{
+                "type": "host",
+                "value": "horoscope.pklabs.in"
+            }]
+        }
+    ]
 }
